@@ -18,9 +18,9 @@ var selectedSong = 0
 function mainFunction() {
     var clutter = ""
     arr.forEach(function (elem, index) {
-        clutter += `<div class="song-card" id=${index}>
+        clutter += `<div class="song-card" id="${index}">
     <div class="part1"><img
-            src=${elem.img} alt="">
+            src="${elem.img}" alt="">
         <h2>${elem.songName}</h2>
     </div>
     <h6>3:56</h6>
@@ -29,7 +29,7 @@ function mainFunction() {
     allSongs.innerHTML = clutter
     audio.src = arr[selectedSong].url
 
-    poster.style.backgroundImage = `url(${arr[selectedSong].img})`
+    poster.style.backgroundImage = `url("${arr[selectedSong].img}")`
 
 }
 
