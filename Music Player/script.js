@@ -1,8 +1,8 @@
 var arr = [
-    { songName: "Jale 2", url: "./songs/Jale 2.mp3", img: "./images/Jale 2.jpg" },
-    { songName: "Pehle bhi main", url: "./songs/Pehle Bhi Main.mp3", img: "./images/Pehle bhi main.jpg" },
-    { songName: "Ram Siya Ram", url: "./songs/Ram Siya Ram.mp3", img: "./images/Ram siya ram.jpg" },
-    { songName: "Animal", url: "./songs/Animal.mp3", img: "./images/Arjun vally.jpg" }
+    { songName: "Jale 2", url: "./songs/Jale 2.mp3", img: "./images/Jale 2.jpg" ,time:"03:07"},
+    { songName: "Pehle bhi main", url: "./songs/Pehle Bhi Main.mp3", img: "./images/Pehle bhi main.jpg" ,time:"04:09"},
+    { songName: "Ram Siya Ram", url: "./songs/Ram Siya Ram.mp3", img: "./images/Ram siya ram.jpg", time:"04:11"},
+    { songName: "Animal", url: "./songs/Animal.mp3", img: "./images/Arjun vally.jpg",time:"03:00" }
 ]
 
 var allSongs = document.querySelector("#all-songs")
@@ -18,12 +18,13 @@ var selectedSong = 0
 function mainFunction() {
     var clutter = ""
     arr.forEach(function (elem, index) {
+        console.log(elem.url);
         clutter += `<div class="song-card" id="${index}">
     <div class="part1"><img
             src="${elem.img}" alt="">
         <h2>${elem.songName}</h2>
     </div>
-    <h6>3:56</h6>
+    <h6>${elem.time}</h6>
 </div>`
     })
     allSongs.innerHTML = clutter
